@@ -1,0 +1,22 @@
+html{
+    background: rgb(35, 134, 214)
+}
+
+.main{
+    height: 500px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+input{
+    margin: 30px auto;
+    width: 300px;
+    background: rgb(226, 222, 222);
+}
+
+button{
+    width: 100px;
+}
