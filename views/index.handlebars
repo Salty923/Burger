@@ -5,35 +5,45 @@
             <img src="/assets/img/burger.png">
         </div> 
         <div class="text-center add_menu">
-            <input id="newBurger" type="text">
-            <button id="addBurger" type="button" class="btn btn-large btn-success" placeholder="Add a burger">Add</button>
+            <input id="newBurger" type="text" placeholder="Add a burger">
+            <button id="addBurger" type="button" class="btn btn-large btn-success" >Add</button>
         </div>
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <ul class="devoured">
-            {{#each burgers}}
-              {{#unless devoured}}
-                {{this.burger_name}}
-              {{/unless}}
-            {{/each}}
-        </ul>
-        <button type="button" class="btn btn-large btn-success">Eat a favorite</button>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <ul class="served">
-             {{#each burgers}}
-              {{#unless served}}
-              {{/unless}} 
-            {{/each}}
-        </ul>
-        
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <h2>You have been served</h2>
+                <div class="devoured text-center">
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                        <div class="burger_div text-center">
+                            <div class="text-center">
+                                <p class="text-center">{{this.burger_name}}
+                                    <span>
+                                        <button id="devour" type="button" class="btn btn-sm btn-success" data-id={{this.id}}>Devour!</button>
+                                    </span>
+                                </p>
+                            </div>  
+                        </div>
+                    {{/unless}}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <h2>You have been served</h2>
+                <div class="devoured text-center">
+                    {{#each burgers}} {{#unless devoured}}
+                    <div class="burger_div text-center">
+                        <div class="text-center">
+                            <p class="text-center">{{this.burger_name}}
+                                <span>
+                                    <button id="delete" type="button" class="btn btn-sm btn-danger" data-id={{this.id}}>Delete</button>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    {{/unless}} {{/each}}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
