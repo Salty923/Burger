@@ -1,5 +1,5 @@
 {
-  "name": "Burger",
+  "name": "burger",
   "version": "1.0.0",
   "description": "This app allows you to add and eat burgers",
   "main": "server.js",
