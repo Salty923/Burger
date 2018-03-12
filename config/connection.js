@@ -2,8 +2,9 @@
 var mysql = require("mysql");
 var connection;
 
+//add jaws connection
 if (process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(process.env.JAESDB_URL);
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
 }else{
     connection = mysql.createConnection({
         port: 3306,
